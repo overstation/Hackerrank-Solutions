@@ -1,0 +1,24 @@
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the catAndMouse function below.
+def catAndMouse(x, y, z):
+    distanceXtoZ = abs(x-z)
+    distanceYtoZ = abs(y-z)
+
+    result = ''
+
+    if(distanceXtoZ == distanceYtoZ):
+        result = 'Mouse C'
+    elif(distanceXtoZ > distanceYtoZ):
+        result = 'Cat B'
+    else:
+        result = 'Cat A'
+
+    return result
+
+
+
