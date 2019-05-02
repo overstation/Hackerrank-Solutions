@@ -1,0 +1,18 @@
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the countingValleys function below.
+def countingValleys(n, s):
+    levelDirection = valleyCount = 0
+    for steps in range(n):
+        if s[steps] == 'U':
+            levelDirection += 1
+            if levelDirection == 0:
+                valleyCount += 1
+        else:
+            levelDirection -= 1
+
+    return valleyCount
